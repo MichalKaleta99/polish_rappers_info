@@ -22,7 +22,6 @@ function formatNumber(number) {
     <table class="table">
     <thead>
     <tr>
-    <th>ID</th>
     <th>Ksywka</th>
     <th>Data urodzenia</th>
     <th>Instagram</th>
@@ -39,7 +38,6 @@ function formatNumber(number) {
     <tbody>
     <c:forEach items="${rappers}" var="rapper">
     <tr>
-    <td>${rapper.rapper.id}</td>
     <td>${rapper.rapper.name}</td>
     <td>${rapper.rapper.dateOfBirth}</td>
     <td>${rapper.name}</td>

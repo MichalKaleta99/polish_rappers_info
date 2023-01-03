@@ -29,14 +29,9 @@
 
     <td>${album.name}</td>
     <td>
-      <c:choose>
-        <c:when test="${album.numberOfSongs==0}">
-          <c:out value="" />
-              </c:when>
-        <c:otherwise>
+
           ${album.numberOfSongs}
-        </c:otherwise>
-      </c:choose>
+
     </td>
     <td>${album.lengthOfAlbum}</td>
      <td><a href="delete-album?rapperId=${askedRapper.id}&albumId=${album.id}" class="btn btn-danger"> X </td>
