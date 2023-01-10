@@ -6,19 +6,26 @@ import org.apache.tomcat.util.descriptor.web.JspPropertyGroup;
 import org.apache.tomcat.util.descriptor.web.JspPropertyGroupDescriptorImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.embedded.tomcat.TomcatContextCustomizer;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.stereotype.Component;
 
+import javax.servlet.http.HttpServlet;
 import java.util.Collections;
 
-@SpringBootApplication
-public class RappersInfo {
+	@SpringBootApplication
+	public class RappersInfo extends SpringBootServletInitializer {
 
-	public static void main(String[] args) {
+		@Override
+		protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+			return builder.sources(RappersInfo.class);
+		}
 
-		SpringApplication.run(RappersInfo.class, args);
+		public static void main(String[] args) {
+			SpringApplication.run(RappersInfo.class);
+		}
 
-	}
 	@Component
 	public class JspContextCustomizer implements TomcatContextCustomizer {
 		@Override
@@ -31,5 +38,6 @@ public class RappersInfo {
 					Collections.emptyList()));
 		}
 	}
+
 
 }

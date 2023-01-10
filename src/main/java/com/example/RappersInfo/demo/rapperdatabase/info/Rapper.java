@@ -1,8 +1,9 @@
 package com.example.RappersInfo.demo.rapperdatabase.info;
 
-import jakarta.persistence.*;
 import lombok.*;
 
+
+import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Set;
 

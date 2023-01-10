@@ -1,6 +1,6 @@
 package com.example.RappersInfo.demo.rapperdatabase.info;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.*;
 
 @NoArgsConstructor

@@ -3,9 +3,8 @@ package com.example.RappersInfo.demo.rapperdatabase.db;
 import com.example.RappersInfo.demo.rapperdatabase.info.Rapper;
 import org.springframework.stereotype.Repository;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
+
+import javax.persistence.*;
 import java.util.List;
 
 @Repository
